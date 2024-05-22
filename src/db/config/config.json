@@ -1,0 +1,24 @@
+{
+    "development": {
+      "username": "admin",
+      "password": "0974222365",
+      "database": "service_notification",
+      "host": "hcmut-thesis.cfsee8gs2fxd.ap-southeast-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "admin",
+      "password": "0974222365",
+      "database": "service_notification",
+      "host": "hcmut-thesis.cfsee8gs2fxd.ap-southeast-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "admin",
+      "password": "0974222365",
+      "database": "service_notification",
+      "host": "hcmut-thesis.cfsee8gs2fxd.ap-southeast-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    }
+}
+  
