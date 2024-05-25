@@ -431,7 +431,7 @@ class NotificationController {
     // [POST] /notification/comment-on-assignment
     notifyTeacherCommentOnAssignment = async (req: Request, res: Response, _next: NextFunction) => {
         try {
-            const { id_assignment, id_course, exam_name, teacher_name, id_student } = req.body.data;
+            const { id_assignment, id_course, exam_name, teacher_name, id_student, examType } = req.body.data;
 
             const io = socketInstance.getIoInstance();
             const clientConnected = socketInstance.getClientConnected();
@@ -446,10 +446,12 @@ class NotificationController {
                 });
             }
 
+            const type = `assignment ${examType}`
+
             const newNoti = await NotificationModel.create({
                 id_user: id_student,
                 content: "Giáo viên đã nhận xét bài làm",
-                type: "assignment",
+                type,
                 exam_name,
                 id_assignment,
                 id_course,
